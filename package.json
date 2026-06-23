@@ -1,0 +1,8 @@
+{
+  "name": "622-web",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^25.1.0"
+  }
+}

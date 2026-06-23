@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Save App Screens</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          leaf:  { 700:'#1f8f43', 600:'#27a04c', 500:'#34b85c', 400:'#5fcd7e', 300:'#8fdfaa', 100:'#e4f6e9', 50:'#f2fbf4' },
+          ink:   { 900:'#13201a', 700:'#384740', 500:'#6b7872', 300:'#b0bab5' },
+          paper: '#f5f7f2',
+        },
+        fontFamily: {
+          display: ['Poppins','system-ui','sans-serif'],
+          sans: ['Inter','system-ui','sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  body{background:#e8ede2;font-family:'Inter',sans-serif;padding:60px 40px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+  .phone{width:375px;height:812px;background:#fff;border-radius:48px;overflow:hidden;box-shadow:0 40px 100px -20px rgba(19,32,26,.35),0 0 0 12px #1a1a1a,0 0 0 14px #333;position:relative;flex-shrink:0}
+  .phone::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:150px;height:28px;background:#1a1a1a;border-radius:0 0 20px 20px;z-index:50}
+  .screen{height:100%;overflow-y:auto;padding-top:48px;padding-bottom:24px;background:#fff}
+  .display{font-family:'Poppins',sans-serif;letter-spacing:-.01em}
+  .status-bar{position:absolute;top:0;left:0;right:0;height:48px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 6px;font-size:12px;font-weight:600;color:#13201a;z-index:40;background:linear-gradient(180deg,#fff 60%,transparent)}
+  .tab-bar{position:absolute;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(19,32,26,.08);display:flex;justify-content:space-around;align-items:center;height:80px;padding-bottom:16px;z-index:40}
+  .tab-bar .tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:#b0bab5}
+  .tab-bar .tab.active{color:#34b85c}
+  .tab-bar .tab svg{width:24px;height:24px}
+</style>
+</head>
+<body>
+
+<!-- ===== SCREEN 1: HOME / DISCOVER ===== -->
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●</span></div>
+  <div class="screen px-6">
+    <!-- greeting -->
+    <div class="flex items-center justify-between mt-2 mb-6">
+      <div>
+        <p class="text-sm text-ink-500">Hello, Jake 👋</p>
+        <h1 class="display text-2xl font-bold text-ink-900 -mt-0.5">What would you like<br>to cook today?</h1>
+      </div>
+      <div class="w-11 h-11 rounded-full bg-leaf-100 grid place-items-center text-leaf-600 font-bold text-lg">J</div>
+    </div>
+    <!-- search -->
+    <div class="flex items-center gap-3 bg-paper rounded-2xl px-4 py-3 mb-6">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-ink-300"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="text-sm text-ink-300">Search recipes…</span>
+    </div>
+    <!-- categories -->
+    <div class="flex items-center justify-between mb-3"><span class="display font-bold text-ink-900">Categories</span><span class="text-xs font-semibold text-leaf-600">See all</span></div>
+    <div class="flex gap-3 mb-6 overflow-x-auto pb-1">
+      <div class="flex flex-col items-center gap-1.5 min-w-[64px]"><span class="grid place-items-center w-14 h-14 rounded-2xl bg-leaf-500 text-white text-xl">🍳</span><span class="text-[11px] font-semibold text-ink-700">Breakfast</span></div>
+      <div class="flex flex-col items-center gap-1.5 min-w-[64px]"><span class="grid place-items-center w-14 h-14 rounded-2xl bg-leaf-100 text-xl">🥗</span><span class="text-[11px] font-semibold text-ink-500">Lunch</span></div>
+      <div class="flex flex-col items-center gap-1.5 min-w-[64px]"><span class="grid place-items-center w-14 h-14 rounded-2xl bg-leaf-100 text-xl">🍝</span><span class="text-[11px] font-semibold text-ink-500">Dinner</span></div>
+      <div class="flex flex-col items-center gap-1.5 min-w-[64px]"><span class="grid place-items-center w-14 h-14 rounded-2xl bg-leaf-100 text-xl">🍰</span><span class="text-[11px] font-semibold text-ink-500">Dessert</span></div>
+      <div class="flex flex-col items-center gap-1.5 min-w-[64px]"><span class="grid place-items-center w-14 h-14 rounded-2xl bg-leaf-100 text-xl">🍕</span><span class="text-[11px] font-semibold text-ink-500">Snacks</span></div>
+    </div>
+    <!-- recommendation -->
+    <div class="flex items-center justify-between mb-3"><span class="display font-bold text-ink-900">Recommendation</span><span class="text-xs font-semibold text-leaf-600">See all</span></div>
+    <div class="flex gap-4 overflow-x-auto pb-2">
+      <div class="min-w-[200px] rounded-2xl overflow-hidden bg-white shadow-lg shadow-ink-900/8 border border-ink-900/5">
+        <div class="h-32 bg-gradient-to-br from-amber-100 to-orange-100 flex items-end justify-center"><span class="text-6xl -mb-2">🍝</span></div>
+        <div class="p-3"><p class="display font-bold text-sm text-ink-900">Creamy Pasta</p><div class="flex items-center gap-1 mt-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="#34b85c"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span class="text-[11px] text-ink-500">4.8 · 25 min</span></div></div>
+      </div>
+      <div class="min-w-[200px] rounded-2xl overflow-hidden bg-white shadow-lg shadow-ink-900/8 border border-ink-900/5">
+        <div class="h-32 bg-gradient-to-br from-green-100 to-emerald-100 flex items-end justify-center"><span class="text-6xl -mb-2">🥑</span></div>
+        <div class="p-3"><p class="display font-bold text-sm text-ink-900">Avocado Toast</p><div class="flex items-center gap-1 mt-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="#34b85c"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span class="text-[11px] text-ink-500">4.9 · 10 min</span></div></div>
+      </div>
+    </div>
+    <!-- recipes of the week -->
+    <div class="flex items-center justify-between mt-6 mb-3"><span class="display font-bold text-ink-900">Recipes of the Week</span></div>
+    <div class="space-y-3 pb-24">
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-16 h-16 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center text-3xl flex-none">🍣</div><div class="flex-1 min-w-0"><p class="display font-semibold text-sm text-ink-900">Salmon Sushi Bowl</p><p class="text-[11px] text-ink-500">⭐ 4.7 · 30 min · 420 cal</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-leaf-500 flex-none"><path d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" fill="currentColor"/></svg></div>
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-100 to-yellow-100 flex items-center justify-center text-3xl flex-none">🥞</div><div class="flex-1 min-w-0"><p class="display font-semibold text-sm text-ink-900">Fluffy Pancakes</p><p class="text-[11px] text-ink-500">⭐ 4.9 · 15 min · 350 cal</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-ink-300 flex-none"><path d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" stroke="currentColor" stroke-width="2"/></svg></div>
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center text-3xl flex-none">🥙</div><div class="flex-1 min-w-0"><p class="display font-semibold text-sm text-ink-900">Chicken Wrap</p><p class="text-[11px] text-ink-500">⭐ 4.6 · 20 min · 380 cal</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-ink-300 flex-none"><path d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" stroke="currentColor" stroke-width="2"/></svg></div>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg><span>Home</span></div>
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg><span>Search</span></div>
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z"/></svg><span>Saved</span></div>
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0114 0v2"/></svg><span>Profile</span></div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 2: RECIPE DETAIL ===== -->
+<div class="phone">
+  <div class="status-bar" style="color:#fff"><span>9:41</span><span>●●●</span></div>
+  <div class="screen" style="padding-top:0">
+    <!-- hero image -->
+    <div class="relative h-[340px] bg-gradient-to-b from-emerald-200 via-green-100 to-amber-50 flex items-end justify-center">
+      <span class="text-[120px] -mb-4">🍝</span>
+      <!-- back + share -->
+      <div class="absolute top-12 left-5 w-10 h-10 rounded-full bg-white/80 backdrop-blur grid place-items-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#13201a" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></div>
+      <div class="absolute top-12 right-5 w-10 h-10 rounded-full bg-white/80 backdrop-blur grid place-items-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="#34b85c"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+    </div>
+    <!-- content card -->
+    <div class="bg-white -mt-8 rounded-t-[32px] relative z-10 px-6 pt-6 pb-28">
+      <div class="flex items-start justify-between mb-1">
+        <h1 class="display text-2xl font-bold text-ink-900">Creamy Pasta</h1>
+        <div class="flex items-center gap-1 mt-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="#34b85c"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span class="display font-bold text-ink-900">4.8</span></div>
+      </div>
+      <p class="text-sm text-ink-500 mb-5">by Chef Maria · Italian</p>
+      <!-- stats -->
+      <div class="flex gap-3 mb-6">
+        <div class="flex-1 bg-leaf-50 rounded-2xl p-3 text-center"><div class="display font-bold text-ink-900">25</div><div class="text-[11px] text-ink-500">Minutes</div></div>
+        <div class="flex-1 bg-leaf-50 rounded-2xl p-3 text-center"><div class="display font-bold text-ink-900">420</div><div class="text-[11px] text-ink-500">Calories</div></div>
+        <div class="flex-1 bg-leaf-50 rounded-2xl p-3 text-center"><div class="display font-bold text-ink-900">4</div><div class="text-[11px] text-ink-500">Servings</div></div>
+      </div>
+      <h2 class="display font-bold text-lg text-ink-900 mb-3">Description</h2>
+      <p class="text-sm text-ink-500 leading-relaxed mb-6">A rich and creamy fettuccine alfredo with freshly grated Parmesan and a hint of nutmeg. This comfort classic is ready in under 30 minutes — perfect for weeknight dinners.</p>
+      <h2 class="display font-bold text-lg text-ink-900 mb-3">Ingredients</h2>
+      <div class="space-y-2.5">
+        <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg bg-leaf-100 grid place-items-center text-sm">🍝</span><span class="text-sm text-ink-700">400g fettuccine</span></div>
+        <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg bg-leaf-100 grid place-items-center text-sm">🧈</span><span class="text-sm text-ink-700">60g unsalted butter</span></div>
+        <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg bg-leaf-100 grid place-items-center text-sm">🧀</span><span class="text-sm text-ink-700">150g Parmesan, grated</span></div>
+        <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg bg-leaf-100 grid place-items-center text-sm">🥛</span><span class="text-sm text-ink-700">240ml heavy cream</span></div>
+        <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg bg-leaf-100 grid place-items-center text-sm">🧂</span><span class="text-sm text-ink-700">Salt, pepper, nutmeg</span></div>
+      </div>
+      <!-- cook button -->
+      <div class="mt-8 flex justify-center">
+        <button class="inline-flex items-center gap-2 bg-leaf-500 text-white display font-bold rounded-full px-8 py-4 shadow-lg shadow-leaf-500/30 text-lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Start Cooking
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 3: SCAN & IMPORT ===== -->
+<div class="phone">
+  <div class="status-bar" style="color:#fff"><span>9:41</span><span>●●●</span></div>
+  <div class="screen bg-ink-900" style="padding-top:0">
+    <!-- camera viewfinder area -->
+    <div class="relative h-[500px] bg-gradient-to-b from-ink-900 via-ink-700/80 to-ink-900 flex items-center justify-center">
+      <!-- scan frame -->
+      <div class="relative w-64 h-64">
+        <!-- corner marks -->
+        <div class="absolute top-0 left-0 w-10 h-10 border-t-4 border-l-4 border-leaf-400 rounded-tl-xl"></div>
+        <div class="absolute top-0 right-0 w-10 h-10 border-t-4 border-r-4 border-leaf-400 rounded-tr-xl"></div>
+        <div class="absolute bottom-0 left-0 w-10 h-10 border-b-4 border-l-4 border-leaf-400 rounded-bl-xl"></div>
+        <div class="absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 border-leaf-400 rounded-br-xl"></div>
+        <!-- scan line -->
+        <div class="absolute top-1/2 left-3 right-3 h-0.5 bg-gradient-to-r from-transparent via-leaf-400 to-transparent"></div>
+        <!-- barcode icon -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-20">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M7 7v10M10 7v10M14 7v10M17 7v10"/></svg>
+        </div>
+      </div>
+      <!-- back button -->
+      <div class="absolute top-12 left-5 w-10 h-10 rounded-full bg-white/10 backdrop-blur grid place-items-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></div>
+      <div class="absolute top-12 right-5 w-10 h-10 rounded-full bg-white/10 backdrop-blur grid place-items-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7z"/><path d="M13 2v7h7"/></svg></div>
+    </div>
+    <!-- bottom sheet -->
+    <div class="bg-white rounded-t-[32px] -mt-10 relative z-10 px-6 pt-6 pb-28">
+      <div class="w-10 h-1 rounded-full bg-ink-300 mx-auto mb-5"></div>
+      <h2 class="display text-xl font-bold text-ink-900 text-center mb-2">Scan a Recipe</h2>
+      <p class="text-sm text-ink-500 text-center mb-6">Point your camera at a barcode, QR code, or recipe card</p>
+      <!-- method tabs -->
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="bg-leaf-500 rounded-2xl p-4 text-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" class="mx-auto mb-1"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2"/></svg><span class="text-[11px] font-semibold text-white">Scan</span></div>
+        <div class="bg-paper rounded-2xl p-4 text-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7872" stroke-width="2" class="mx-auto mb-1"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg><span class="text-[11px] font-semibold text-ink-500">Paste Link</span></div>
+        <div class="bg-paper rounded-2xl p-4 text-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7872" stroke-width="2" class="mx-auto mb-1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="text-[11px] font-semibold text-ink-500">Photo</span></div>
+      </div>
+      <div class="bg-leaf-50 rounded-2xl p-4 flex items-start gap-3">
+        <span class="grid place-items-center w-10 h-10 rounded-xl bg-leaf-500 text-white flex-none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <div><p class="display font-semibold text-sm text-ink-900">Verified Import</p><p class="text-[11px] text-ink-500 mt-0.5">We validate every scan to make sure your recipe is accurate</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 4: SAVED / BOOKMARKS ===== -->
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●</span></div>
+  <div class="screen px-6">
+    <h1 class="display text-2xl font-bold text-ink-900 mt-2 mb-5">My Recipes</h1>
+    <!-- search -->
+    <div class="flex items-center gap-3 bg-paper rounded-2xl px-4 py-3 mb-5">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-ink-300"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="text-sm text-ink-300">Search your recipes…</span>
+    </div>
+    <!-- filter chips -->
+    <div class="flex gap-2 mb-5 overflow-x-auto">
+      <span class="px-4 py-1.5 rounded-full bg-leaf-500 text-white text-xs font-semibold">All</span>
+      <span class="px-4 py-1.5 rounded-full bg-paper text-ink-500 text-xs font-semibold">Recently Viewed</span>
+      <span class="px-4 py-1.5 rounded-full bg-paper text-ink-500 text-xs font-semibold">Made It</span>
+      <span class="px-4 py-1.5 rounded-full bg-paper text-ink-500 text-xs font-semibold">Favorites</span>
+    </div>
+    <!-- collection grid -->
+    <div class="flex items-center justify-between mb-3"><span class="display font-bold text-ink-900">Collections</span><span class="text-xs font-semibold text-leaf-600">+ New</span></div>
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="rounded-2xl overflow-hidden border border-ink-900/5 shadow-sm">
+        <div class="h-24 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center text-4xl">🍝</div>
+        <div class="p-2.5"><p class="display font-semibold text-sm text-ink-900">Italian Night</p><p class="text-[11px] text-ink-500">12 recipes</p></div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-ink-900/5 shadow-sm">
+        <div class="h-24 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center text-4xl">🥑</div>
+        <div class="p-2.5"><p class="display font-semibold text-sm text-ink-900">Quick &amp; Easy</p><p class="text-[11px] text-ink-500">8 recipes</p></div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-ink-900/5 shadow-sm">
+        <div class="h-24 bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center text-4xl">🍰</div>
+        <div class="p-2.5"><p class="display font-semibold text-sm text-ink-900">Baking</p><p class="text-[11px] text-ink-500">6 recipes</p></div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-ink-900/5 shadow-sm">
+        <div class="h-24 bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center text-4xl">🍣</div>
+        <div class="p-2.5"><p class="display font-semibold text-sm text-ink-900">Asian Fusion</p><p class="text-[11px] text-ink-500">9 recipes</p></div>
+      </div>
+    </div>
+    <!-- recent saves -->
+    <div class="flex items-center justify-between mb-3"><span class="display font-bold text-ink-900">Recent Saves</span></div>
+    <div class="space-y-3 pb-24">
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-100 to-yellow-100 flex items-center justify-center text-2xl flex-none">🥞</div><div class="flex-1"><p class="display font-semibold text-sm text-ink-900">Fluffy Pancakes</p><p class="text-[11px] text-ink-500">Saved 2 hrs ago</p></div></div>
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center text-2xl flex-none">🥙</div><div class="flex-1"><p class="display font-semibold text-sm text-ink-900">Chicken Wrap</p><p class="text-[11px] text-ink-500">Saved yesterday</p></div></div>
+      <div class="flex gap-3 items-center bg-paper rounded-2xl p-3"><div class="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-100 to-purple-100 flex items-center justify-center text-2xl flex-none">🫐</div><div class="flex-1"><p class="display font-semibold text-sm text-ink-900">Berry Smoothie</p><p class="text-[11px] text-ink-500">Saved 2 days ago</p></div></div>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg><span>Home</span></div>
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg><span>Search</span></div>
+    <div class="tab active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z"/></svg><span>Saved</span></div>
+    <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0114 0v2"/></svg><span>Profile</span></div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 5: COOK MODE ===== -->
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●</span></div>
+  <div class="screen px-6 bg-leaf-50">
+    <div class="flex items-center justify-between mt-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-white grid place-items-center shadow-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#13201a" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></div>
+      <span class="display font-bold text-ink-900">Cook Mode</span>
+      <div class="w-10 h-10 rounded-full bg-white grid place-items-center shadow-sm text-leaf-500"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+    </div>
+    <!-- recipe name -->
+    <div class="bg-white rounded-3xl p-5 shadow-sm mb-4">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-4xl">🍝</span>
+        <div><h2 class="display text-xl font-bold text-ink-900">Creamy Pasta</h2><p class="text-xs text-ink-500">Step 2 of 5</p></div>
+      </div>
+      <!-- progress -->
+      <div class="w-full h-2 bg-leaf-100 rounded-full overflow-hidden"><div class="h-full bg-leaf-500 rounded-full" style="width:40%"></div></div>
+    </div>
+    <!-- current step -->
+    <div class="bg-white rounded-3xl p-6 shadow-sm mb-4">
+      <div class="flex items-center gap-2 mb-3"><span class="grid place-items-center w-8 h-8 rounded-xl bg-leaf-500 text-white display font-bold text-sm">2</span><span class="display font-bold text-ink-900">Prepare the Sauce</span></div>
+      <p class="text-ink-700 leading-relaxed text-[15px]">Melt <span class="font-semibold text-leaf-700">60g butter</span> in a large pan over medium heat. Once foaming, pour in the <span class="font-semibold text-leaf-700">heavy cream</span> and stir gently for 2-3 minutes until it just begins to simmer.</p>
+      <!-- timer -->
+      <div class="mt-5 bg-leaf-50 rounded-2xl p-4 flex items-center justify-between">
+        <div><span class="display text-3xl font-bold text-ink-900">2:47</span><p class="text-[11px] text-ink-500 mt-0.5">remaining</p></div>
+        <div class="flex gap-2">
+          <button class="w-12 h-12 rounded-full bg-ink-900 text-white grid place-items-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></button>
+          <button class="w-12 h-12 rounded-full bg-leaf-500 text-white grid place-items-center shadow-lg shadow-leaf-500/30"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4l14 8-14 8z"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <!-- navigation -->
+    <div class="flex gap-3 pb-6">
+      <button class="flex-1 py-4 rounded-2xl bg-white text-ink-700 display font-semibold text-center shadow-sm">← Previous</button>
+      <button class="flex-1 py-4 rounded-2xl bg-leaf-500 text-white display font-semibold text-center shadow-lg shadow-leaf-500/25">Next Step →</button>
+    </div>
+    <!-- ingredient checklist -->
+    <div class="bg-white rounded-3xl p-5 shadow-sm pb-28">
+      <h3 class="display font-bold text-ink-900 mb-3">Ingredients Needed</h3>
+      <div class="space-y-3">
+        <label class="flex items-center gap-3"><input type="checkbox" checked class="w-5 h-5 rounded-lg accent-leaf-500"><span class="text-sm text-ink-500 line-through">60g unsalted butter</span></label>
+        <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 rounded-lg accent-leaf-500"><span class="text-sm text-ink-700">240ml heavy cream</span></label>
+        <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 rounded-lg accent-leaf-500"><span class="text-sm text-ink-700">150g Parmesan</span></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
