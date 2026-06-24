@@ -46,9 +46,20 @@
 - **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
 - **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
 
+## Development Workflow: Local → Test → GitHub → Vercel
+
+**The pipeline:**
+1. **Make changes** to HTML/CSS files
+2. **Test on localhost** — start `node serve.mjs`, verify in browser, screenshot if needed
+3. **Only commit + push to GitHub when explicitly told** — do not auto-commit
+4. **GitHub auto-deploys to Vercel** — pull requests, merges, and main branch pushes trigger automatic Vercel deployments
+
+**Critical:** Do not commit or push without explicit instruction. Always verify changes work on localhost first.
+
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
 - Do not "improve" a reference design — match it
 - Do not stop after one screenshot pass
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
+- **Do not commit changes to GitHub until explicitly told** — always test on localhost first
