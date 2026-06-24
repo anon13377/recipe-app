@@ -7,226 +7,226 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink:   { 900:'#13201a', 700:'#384740', 500:'#6b7872' },
-          leaf:  { 700:'#1f8f43', 600:'#27a04c', 500:'#34b85c', 400:'#5fcd7e', 300:'#8fdfaa', 100:'#e4f6e9' },
-          butter:'#f7c948',
-          cream: '#f0f4eb',
-        },
-        fontFamily: {
-          display: ['Poppins','system-ui','sans-serif'],
-          sans: ['Inter','system-ui','sans-serif'],
-        },
-        transitionTimingFunction: { spring: 'cubic-bezier(.22,1.2,.36,1)' },
-      }
-    }
+ tailwind.config = {
+  theme: {
+   extend: {
+    colors: {
+     ink:  { 900:'#13201a', 700:'#384740', 500:'#6b7872' },
+     leaf: { 700:'#1f8f43', 600:'#27a04c', 500:'#34b85c', 400:'#5fcd7e', 300:'#8fdfaa', 100:'#e4f6e9' },
+     butter:'#f7c948',
+     cream: '#f0f4eb',
+    },
+    fontFamily: {
+     display: ['Poppins','system-ui','sans-serif'],
+     sans: ['Inter','system-ui','sans-serif'],
+    },
+    transitionTimingFunction: { spring: 'cubic-bezier(.22,1.2,.36,1)' },
+   }
   }
+ }
 </script>
 <style>
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',sans-serif;color:#13201a;
-    background:
-      radial-gradient(1000px 600px at 80% 5%, rgba(95,205,126,.28), transparent 50%),
-      radial-gradient(800px 500px at 10% 40%, rgba(52,184,92,.18), transparent 50%),
-      radial-gradient(700px 600px at 60% 90%, rgba(143,223,170,.15), transparent 50%),
-      linear-gradient(170deg,#e8ede2 0%,#f0f4eb 35%,#dfe8d6 100%);
-    min-height:100vh;
-  }
-  .display{font-family:'Poppins',sans-serif;letter-spacing:-.02em;line-height:1.08}
-  .body{line-height:1.7}
-  .glass{
-    background:rgba(255,255,255,.45);
-    backdrop-filter:blur(28px) saturate(150%);
-    -webkit-backdrop-filter:blur(28px) saturate(150%);
-    border:1px solid rgba(255,255,255,.6);
-    box-shadow:0 8px 32px rgba(19,32,26,.06), inset 0 1px 0 rgba(255,255,255,.7);
-  }
-  .glass-card{
-    background:rgba(255,255,255,.5);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.65);
-    box-shadow:0 12px 36px rgba(19,32,26,.08), inset 0 1px 0 rgba(255,255,255,.8);
-  }
-  .glass-strong{
-    background:rgba(255,255,255,.6);
-    backdrop-filter:blur(32px) saturate(160%);
-    -webkit-backdrop-filter:blur(32px) saturate(160%);
-    border:1px solid rgba(255,255,255,.7);
-    box-shadow:0 20px 50px rgba(19,32,26,.12), inset 0 1px 0 rgba(255,255,255,.9);
-  }
-  .glass-green{
-    background:rgba(52,184,92,.08);
-    backdrop-filter:blur(24px);
-    -webkit-backdrop-filter:blur(24px);
-    border:1px solid rgba(52,184,92,.2);
-    box-shadow:0 8px 28px rgba(52,184,92,.08);
-  }
-  .glow-orb{position:absolute;border-radius:50%;pointer-events:none}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  .floaty{animation:floaty 6s ease-in-out infinite}
-  @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-  .rise{animation:rise .8s cubic-bezier(.22,1.2,.36,1) both}
-  .ring:focus-visible{outline:3px solid #34b85c;outline-offset:3px}
+ html{scroll-behavior:smooth}
+ body{
+  font-family:'Inter',sans-serif;color:#13201a;
+  background:
+   radial-gradient(1000px 600px at 80% 5%, rgba(95,205,126,.28), transparent 50%),
+   radial-gradient(800px 500px at 10% 40%, rgba(52,184,92,.18), transparent 50%),
+   radial-gradient(700px 600px at 60% 90%, rgba(143,223,170,.15), transparent 50%),
+   linear-gradient(170deg,#e8ede2 0%,#f0f4eb 35%,#dfe8d6 100%);
+  min-height:100vh;
+ }
+ .display{font-family:'Poppins',sans-serif;letter-spacing:-.02em;line-height:1.08}
+ .body{line-height:1.7}
+ .glass{
+  background:rgba(255,255,255,.45);
+  backdrop-filter:blur(28px) saturate(150%);
+  -webkit-backdrop-filter:blur(28px) saturate(150%);
+  border:1px solid rgba(255,255,255,.6);
+  box-shadow:0 8px 32px rgba(19,32,26,.06), inset 0 1px 0 rgba(255,255,255,.7);
+ }
+ .glass-card{
+  background:rgba(255,255,255,.5);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 12px 36px rgba(19,32,26,.08), inset 0 1px 0 rgba(255,255,255,.8);
+ }
+ .glass-strong{
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(32px) saturate(160%);
+  -webkit-backdrop-filter:blur(32px) saturate(160%);
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 20px 50px rgba(19,32,26,.12), inset 0 1px 0 rgba(255,255,255,.9);
+ }
+ .glass-green{
+  background:rgba(52,184,92,.08);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(52,184,92,.2);
+  box-shadow:0 8px 28px rgba(52,184,92,.08);
+ }
+ .glow-orb{position:absolute;border-radius:50%;pointer-events:none}
+ @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+ .floaty{animation:floaty 6s ease-in-out infinite}
+ @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+ .rise{animation:rise .8s cubic-bezier(.22,1.2,.36,1) both}
+ .ring:focus-visible{outline:3px solid #34b85c;outline-offset:3px}
 </style>
 </head>
 <body class="antialiased">
 
 <!-- NAV -->
 <header class="sticky top-0 z-50 glass">
-  <nav class="max-w-6xl mx-auto px-6 h-[74px] flex items-center justify-between">
-    <a href="#" class="ring-0 rounded-xl flex items-center gap-2.5 group">
-      <span class="grid place-items-center w-10 h-10 rounded-2xl bg-leaf-500 text-white shadow-lg shadow-leaf-500/25 transition-transform duration-300 ease-spring group-hover:scale-110">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-3.5 3-6 7-6s7 2.5 7 6M6 12c2 4 10 4 12 0M9 6c0-2 1.5-3 3-3s3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span class="display font-extrabold text-2xl tracking-tight text-ink-900">Save</span>
-    </a>
-    <div class="hidden md:flex items-center gap-9 text-sm font-medium text-ink-500">
-      <a href="#features" class="hover:text-leaf-600 transition-colors duration-200 ring rounded">Features</a>
-      <a href="#how" class="hover:text-leaf-600 transition-colors duration-200 ring rounded">How it works</a>
-      <a href="#own" class="hover:text-leaf-600 transition-colors duration-200 ring rounded">Ownership</a>
-    </div>
-    <a href="#get" class="ring-0 inline-flex items-center gap-2 rounded-full bg-leaf-500 text-white font-semibold text-sm px-5 py-2.5 shadow-lg shadow-leaf-500/25 transition duration-300 ease-spring hover:-translate-y-0.5 hover:bg-leaf-600 active:translate-y-0 active:scale-95">
-      Get the App
-    </a>
-  </nav>
+ <nav class="max-w-6xl mx-auto px-6 h-[74px] flex items-center justify-between">
+  <a href="#" class="ring-0 rounded-xl flex items-center gap-2.5 group">
+   <span class="grid place-items-center w-10 h-10 rounded-2xl bg-leaf-500 text-white shadow-lg shadow-leaf-500/25 transition-transform duration-300 ease-spgroup-hover:scale-110">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-3.5 3-6 7-6s7 2.5 7 6M6 12c2 4 10 4 12 0M9 6c0-2 1.5-3 3-3s3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   </span>
+   <span class="display font-extrabold text-2xl tracking-tight text-ink-900">Save</span>
+  </a>
+  <div class="hidden md:flex items-center gap-9 text-sm font-medium text-ink-500">
+   <a href="#features" class="hover:text-leaf-600 transition-colors duration-200 rounded">Features</a>
+   <a href="#how" class="hover:text-leaf-600 transition-colors duration-200 rounded">How it works</a>
+   <a href="#own" class="hover:text-leaf-600 transition-colors duration-200 rounded">Ownership</a>
+  </div>
+  <a href="#get" class="ring-0 inline-flex items-center gap-2 rounded-full bg-leaf-500 text-white font-semibold text-sm px-5 py-2.5 shadow-lg shadow-leaf-500/25 transition duration-300 ease-sphover:-translate-y-0.5 hover:bg-leaf-600 active:translate-y-0 active:scale-95">
+   Get the App
+  </a>
+ </nav>
 </header>
 
 <!-- HERO -->
 <section class="relative overflow-hidden">
-  <div class="glow-orb w-[600px] h-[400px] bg-leaf-400/30 top-[-15%] right-[10%] blur-[100px]"></div>
-  <div class="glow-orb w-[400px] h-[300px] bg-leaf-300/25 bottom-[5%] left-[5%] blur-[80px]"></div>
-  <div class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid lg:grid-cols-2 gap-14 items-center relative z-10">
-    <div class="rise">
-      <span class="inline-flex items-center gap-2 glass-green rounded-full px-4 py-1.5 text-xs font-semibold text-leaf-700 tracking-wide">
-        <span class="w-1.5 h-1.5 rounded-full bg-leaf-500"></span> #1 in your cook group
-      </span>
-      <h1 class="display text-[clamp(2.4rem,5vw,3.9rem)] font-extrabold mt-6 text-ink-900 max-w-[14ch]">
-        What would you like to <span class="text-leaf-500">cook</span> today?
-      </h1>
-      <p class="body mt-6 text-lg text-ink-500 max-w-md">
-        Scan a label, paste a link, or snap a card — Save pulls the full recipe in seconds and keeps it yours forever. <span class="text-leaf-700 font-medium">Get the recipe. Skip the hassle.</span>
-      </p>
-      <div class="mt-8 flex flex-wrap items-center gap-4">
-        <a href="#get" class="ring-0 inline-flex items-center gap-2 rounded-full bg-leaf-500 text-white font-semibold px-7 py-3.5 shadow-lg shadow-leaf-500/30 transition duration-300 ease-spring hover:-translate-y-1 hover:bg-leaf-600 active:translate-y-0 active:scale-95">
-          Start Saving Free
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#how" class="ring-0 glass inline-flex items-center gap-2 rounded-full text-ink-900 font-semibold px-6 py-3.5 transition duration-300 ease-spring hover:-translate-y-1 hover:bg-white/70 active:scale-95">
-          See how it works
-        </a>
-      </div>
-      <div class="mt-10 flex items-center gap-8">
-        <div><div class="display text-2xl font-bold text-ink-900">920</div><div class="text-xs text-ink-500">Recipes saved</div></div>
-        <div class="w-px h-9 bg-ink-900/10"></div>
-        <div><div class="display text-2xl font-bold text-ink-900">85%</div><div class="text-xs text-ink-500">Tried &amp; loved</div></div>
-        <div class="w-px h-9 bg-ink-900/10"></div>
-        <div class="flex items-center gap-1"><span class="display text-2xl font-bold text-ink-900">4.9</span><svg width="18" height="18" viewBox="0 0 24 24" fill="#34b85c"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-      </div>
-    </div>
-    <div class="relative rise" style="animation-delay:.15s">
-      <div class="floaty relative glass-strong rounded-[32px] overflow-hidden">
-        <img src="../brand_assets/Untitled.png" alt="Save app screens" class="w-full block">
-      </div>
-      <div class="floaty absolute -left-3 top-12 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="animation-delay:.6s">
-        <span class="grid place-items-center w-9 h-9 rounded-xl bg-leaf-100 text-leaf-600">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </span>
-        <div><div class="text-sm font-bold text-ink-900">Scanned!</div><div class="text-[11px] text-ink-500">Recipe imported</div></div>
-      </div>
-      <div class="floaty absolute -right-2 bottom-16 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="animation-delay:1s">
-        <span class="grid place-items-center w-9 h-9 rounded-xl bg-leaf-100 text-leaf-600">♥</span>
-        <div><div class="text-sm font-bold text-ink-900">Saved to pantry</div><div class="text-[11px] text-ink-500">Yours forever</div></div>
-      </div>
-    </div>
+ <div class="glow-orb w-[600px] h-[400px] bg-leaf-400/30 top-[-15%] right-[10%] blur-[100px]"></div>
+ <div class="glow-orb w-[400px] h-[300px] bg-leaf-300/25 bottom-[5%] left-[5%] blur-[80px]"></div>
+ <div class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid lg:grid-cols-2 gap-14 items-center relative z-10">
+  <div class="rise">
+   <span class="inline-flex items-center gap-2 glass-green rounded-full px-4 py-1.5 text-xs font-semibold text-leaf-700 tracking-wide">
+    <span class="w-1.5 h-1.5 rounded-full bg-leaf-500"></span> #1 in your cook group
+   </span>
+   <h1 class="display text-[clamp(2.4rem,5vw,3.9rem)] font-extrabold mt-6 text-ink-900 max-w-[14ch]">
+    What would you like to <span class="text-leaf-500">cook</span> today?
+   </h1>
+   <p class="body mt-6 text-lg text-ink-500 max-w-md">
+    Scan a label, paste a link, or snap a card — Save pulls the full recipe in seconds and keeps it yours forever. <span class="text-leaf-700 font-medium">Get the recipe. Skip the hassle.</span>
+   </p>
+   <div class="mt-8 flex flex-wrap items-center gap-4">
+    <a href="#get" class="ring-0 inline-flex items-center gap-2 rounded-full bg-leaf-500 text-white font-semibold px-7 py-3.5 shadow-lg shadow-leaf-500/30 transition duration-300 ease-sphover:-translate-y-1 hover:bg-leaf-600 active:translate-y-0 active:scale-95">
+     Start Saving Free
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#how" class="ring-0 glass inline-flex items-center gap-2 rounded-full text-ink-900 font-semibold px-6 py-3.5 transition duration-300 ease-sphover:-translate-y-1 hover:bg-white/70 active:scale-95">
+     See how it works
+    </a>
+   </div>
+   <div class="mt-10 flex items-center gap-8">
+    <div><div class="display text-2xl font-bold text-ink-900">920</div><div class="text-xs text-ink-500">Recipes saved</div></div>
+    <div class="w-px h-9 bg-ink-900/10"></div>
+    <div><div class="display text-2xl font-bold text-ink-900">85%</div><div class="text-xs text-ink-500">Tried &amp; loved</div></div>
+    <div class="w-px h-9 bg-ink-900/10"></div>
+    <div class="flex items-center gap-1"><span class="display text-2xl font-bold text-ink-900">4.9</span><svg width="18" height="18" viewBox="0 0 24 24" fill="#34b85c"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+   </div>
   </div>
+  <div class="relative rise" style="animation-delay:.15s">
+   <div class="floaty relative glass-strong rounded-[32px] overflow-hidden">
+    <img src="../brand_assets/Untitled.png" alt="Save app screens" class="w-full block">
+   </div>
+   <div class="floaty absolute -left-3 top-12 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="animation-delay:.6s">
+    <span class="grid place-items-center w-9 h-9 rounded-xl bg-leaf-100 text-leaf-600">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </span>
+    <div><div class="text-sm font-bold text-ink-900">Scanned!</div><div class="text-[11px] text-ink-500">Recipe imported</div></div>
+   </div>
+   <div class="floaty absolute -right-2 bottom-16 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="animation-delay:1s">
+    <span class="grid place-items-center w-9 h-9 rounded-xl bg-leaf-100 text-leaf-600">♥</span>
+    <div><div class="text-sm font-bold text-ink-900">Saved to pantry</div><div class="text-[11px] text-ink-500">Yours forever</div></div>
+   </div>
+  </div>
+ </div>
 </section>
 
 <!-- CATEGORIES -->
 <section class="max-w-6xl mx-auto px-6 py-14">
-  <div class="flex items-center justify-between mb-6"><h2 class="display text-xl font-bold text-ink-900">Categories</h2><a href="#features" class="text-sm font-medium text-leaf-600 ring rounded">See all</a></div>
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-    <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-spring hover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spring group-hover:scale-110">🍳</span><span class="font-semibold text-ink-900">Breakfast</span></div>
-    <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-spring hover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spring group-hover:scale-110">🥗</span><span class="font-semibold text-ink-900">Lunch</span></div>
-    <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-spring hover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spring group-hover:scale-110">🍝</span><span class="font-semibold text-ink-900">Dinner</span></div>
-    <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-spring hover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spring group-hover:scale-110">🍰</span><span class="font-semibold text-ink-900">Dessert</span></div>
-  </div>
+ <div class="flex items-center justify-between mb-6"><h2 class="display text-xl font-bold text-ink-900">Categories</h2><a href="#features" class="text-sm font-medium text-leaf-600 rounded">See all</a></div>
+ <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+  <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-sphover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spgroup-hover:scale-110">🍳</span><span class="font-semibold text-ink-900">Breakfast</span></div>
+  <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-sphover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spgroup-hover:scale-110">🥗</span><span class="font-semibold text-ink-900">Lunch</span></div>
+  <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-sphover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spgroup-hover:scale-110">🍝</span><span class="font-semibold text-ink-900">Dinner</span></div>
+  <div class="group glass-card rounded-3xl p-5 flex flex-col items-center gap-3 transition duration-300 ease-sphover:-translate-y-1.5 cursor-pointer"><span class="grid place-items-center w-16 h-16 rounded-2xl bg-leaf-100 text-3xl transition-transform duration-300 ease-spgroup-hover:scale-110">🍰</span><span class="font-semibold text-ink-900">Dessert</span></div>
+ </div>
 </section>
 
 <!-- FEATURES -->
 <section id="features" class="max-w-6xl mx-auto px-6 py-14">
-  <div class="max-w-xl mb-10"><h2 class="display text-[clamp(2rem,4.5vw,3rem)] font-extrabold text-ink-900">Everything your kitchen needs</h2><p class="body mt-3 text-ink-500 text-lg">Four ways in. One place to keep them.</p></div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-    <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-spring hover:-translate-y-2">
-      <div class="h-32 bg-gradient-to-br from-leaf-500/25 to-leaf-400/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M7 8v8M11 8v8M15 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-      <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Scan &amp; Import</h3><p class="body text-sm text-ink-500 mt-1.5">Point your camera — the recipe lands instantly.</p></div>
-    </div>
-    <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-spring hover:-translate-y-2">
-      <div class="h-32 bg-gradient-to-br from-leaf-400/25 to-leaf-300/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Paste &amp; Parse</h3><p class="body text-sm text-ink-500 mt-1.5">Drop a link — we strip fluff and keep the recipe.</p></div>
-    </div>
-    <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-spring hover:-translate-y-2">
-      <div class="h-32 bg-gradient-to-br from-leaf-600/20 to-leaf-400/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M12 3l8 4v5c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V7l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Verified &amp; Secure</h3><p class="body text-sm text-ink-500 mt-1.5">Private, backed up, locked to your account.</p></div>
-    </div>
-    <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-spring hover:-translate-y-2">
-      <div class="h-32 bg-gradient-to-br from-leaf-500/25 to-leaf-300/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Cook Together</h3><p class="body text-sm text-ink-500 mt-1.5">Share with your cook group in one tap.</p></div>
-    </div>
+ <div class="max-w-xl mb-10"><h2 class="display text-[clamp(2rem,4.5vw,3rem)] font-extrabold text-ink-900">Everything your kitchen needs</h2><p class="body mt-3 text-ink-500 text-lg">Four ways in. One place to keep them.</p></div>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-sphover:-translate-y-2">
+   <div class="h-32 bg-gradient-to-br from-leaf-500/25 to-leaf-400/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M7 8v8M11 8v8M15 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+   <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Scan &amp; Import</h3><p class="body text-sm text-ink-500 mt-1.5">Point your camera — the recipe lands instantly.</p></div>
   </div>
+  <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-sphover:-translate-y-2">
+   <div class="h-32 bg-gradient-to-br from-leaf-400/25 to-leaf-300/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+   <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Paste &amp; Parse</h3><p class="body text-sm text-ink-500 mt-1.5">Drop a link — we strip fluff and keep the recipe.</p></div>
+  </div>
+  <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-sphover:-translate-y-2">
+   <div class="h-32 bg-gradient-to-br from-leaf-600/20 to-leaf-400/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M12 3l8 4v5c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V7l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+   <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Verified &amp; Secure</h3><p class="body text-sm text-ink-500 mt-1.5">Private, backed up, locked to your account.</p></div>
+  </div>
+  <div class="group glass-card rounded-3xl overflow-hidden transition duration-300 ease-sphover:-translate-y-2">
+   <div class="h-32 bg-gradient-to-br from-leaf-500/25 to-leaf-300/10 grid place-items-center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-leaf-600"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+   <div class="p-5"><h3 class="display font-bold text-lg text-ink-900">Cook Together</h3><p class="body text-sm text-ink-500 mt-1.5">Share with your cook group in one tap.</p></div>
+  </div>
+ </div>
 </section>
 
 <!-- HOW -->
 <section id="how" class="max-w-6xl mx-auto px-6 py-20">
-  <div class="max-w-xl mb-12"><h2 class="display text-[clamp(2rem,4.5vw,3rem)] font-extrabold text-ink-900">Get the recipe. <span class="text-leaf-500">Skip the hassle.</span></h2></div>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">1</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Capture it</h3><p class="body text-ink-500 mt-2 text-sm">Scan, paste, or snap. Any source, any format — saved in seconds.</p></div>
-    <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">2</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Make it yours</h3><p class="body text-ink-500 mt-2 text-sm">Tag, group, and add notes. Your tweaks have a home.</p></div>
-    <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">3</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Cook &amp; keep</h3><p class="body text-ink-500 mt-2 text-sm">Cook mode, share, export. Yours for good.</p></div>
-  </div>
+ <div class="max-w-xl mb-12"><h2 class="display text-[clamp(2rem,4.5vw,3rem)] font-extrabold text-ink-900">Get the recipe. <span class="text-leaf-500">Skip the hassle.</span></h2></div>
+ <div class="grid md:grid-cols-3 gap-6">
+  <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">1</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Capture it</h3><p class="body text-ink-500 mt-2 text-sm">Scan, paste, or snap. Any source, any format — saved in seconds.</p></div>
+  <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">2</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Make it yours</h3><p class="body text-ink-500 mt-2 text-sm">Tag, group, and add notes. Your tweaks have a home.</p></div>
+  <div class="glass rounded-3xl p-8"><span class="grid place-items-center w-12 h-12 rounded-2xl bg-leaf-500 text-white display font-bold text-lg shadow-lg shadow-leaf-500/25">3</span><h3 class="display text-xl font-bold text-ink-900 mt-5">Cook &amp; keep</h3><p class="body text-ink-500 mt-2 text-sm">Cook mode, share, export. Yours for good.</p></div>
+ </div>
 </section>
 
 <!-- OWN -->
 <section id="own" class="max-w-6xl mx-auto px-6 py-20">
-  <div class="glass-green rounded-[36px] p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
-    <div><h2 class="display text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-ink-900">Your recipes belong to <span class="text-leaf-500">you</span>.</h2><p class="body mt-5 text-ink-700">What you keep is yours to move, share, and pass down.</p></div>
-    <ul class="space-y-4">
-      <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">One-tap export to PDF, print, or plain text</span></li>
-      <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">No ads or affiliate clutter</span></li>
-      <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">Free forever, unlimited recipes</span></li>
-      <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">Cancel anytime, take everything</span></li>
-    </ul>
-  </div>
+ <div class="glass-green rounded-[36px] p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
+  <div><h2 class="display text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-ink-900">Your recipes belong to <span class="text-leaf-500">you</span>.</h2><p class="body mt-5 text-ink-700">What you keep is yours to move, share, and pass down.</p></div>
+  <ul class="space-y-4">
+   <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">One-tap export to PDF, print, or plain text</span></li>
+   <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">No ads or affiliate clutter</span></li>
+   <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">Free forever, unlimited recipes</span></li>
+   <li class="flex gap-3 items-start"><span class="grid place-items-center w-6 h-6 rounded-full bg-leaf-500 text-white flex-none mt-0.5"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="body text-ink-700">Cancel anytime, take everything</span></li>
+  </ul>
+ </div>
 </section>
 
 <!-- CTA -->
 <section id="get"><div class="max-w-3xl mx-auto px-6 py-24 text-center">
-  <h2 class="display text-[clamp(2.2rem,5.5vw,3.6rem)] font-extrabold text-ink-900">Start your reserve today</h2>
-  <p class="body mt-4 text-lg text-ink-500 max-w-lg mx-auto">Free forever — keep what you save, no matter what.</p>
-  <form onsubmit="return false" class="mt-9 flex flex-wrap gap-3 justify-center max-w-md mx-auto">
-    <input type="email" required placeholder="you@email.com" aria-label="Email" class="ring-0 flex-1 min-w-[240px] rounded-full glass px-6 py-3.5 text-ink-900 placeholder-ink-500 transition duration-200 focus:border-leaf-500 outline-none">
-    <button type="submit" class="ring-0 rounded-full bg-leaf-500 text-white font-semibold px-7 py-3.5 shadow-lg shadow-leaf-500/25 transition duration-300 ease-spring hover:-translate-y-1 hover:bg-leaf-600 active:translate-y-0 active:scale-95">Get the App</button>
-  </form>
-  <p class="text-sm text-ink-500 mt-5">No credit card · Export anytime · Cancel whenever</p>
+ <h2 class="display text-[clamp(2.2rem,5.5vw,3.6rem)] font-extrabold text-ink-900">Start your reserve today</h2>
+ <p class="body mt-4 text-lg text-ink-500 max-w-lg mx-auto">Free forever — keep what you save, no matter what.</p>
+ <form onsubmit="return false" class="mt-9 flex flex-wrap gap-3 justify-center max-w-md mx-auto">
+  <input type="email" required placeholder="you@email.com" aria-label="Email" class="ring-0 flex-1 min-w-[240px] rounded-full glass px-6 py-3.5 text-ink-900 placeholder-ink-500 transition duration-200 focus:border-leaf-500 outline-none">
+  <button type="submit" class="ring-0 rounded-full bg-leaf-500 text-white font-semibold px-7 py-3.5 shadow-lg shadow-leaf-500/25 transition duration-300 ease-sphover:-translate-y-1 hover:bg-leaf-600 active:translate-y-0 active:scale-95">Get the App</button>
+ </form>
+ <p class="text-sm text-ink-500 mt-5">No credit card · Export anytime · Cancel whenever</p>
 </div></section>
 
 <!-- FOOTER -->
 <footer class="glass border-t border-white/30">
-  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-wrap justify-between gap-8">
-    <div class="max-w-xs">
-      <div class="flex items-center gap-2.5"><span class="grid place-items-center w-10 h-10 rounded-2xl bg-leaf-500 text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-3.5 3-6 7-6s7 2.5 7 6M6 12c2 4 10 4 12 0M9 6c0-2 1.5-3 3-3s3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="display font-extrabold text-2xl text-ink-900">Save</span></div>
-      <p class="body text-sm text-ink-500 mt-4">Own your recipes. Skip the hassle.</p>
-    </div>
-    <div class="flex gap-14 text-sm">
-      <div><h4 class="display font-semibold text-ink-900 mb-3">Product</h4><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 ring rounded">Features</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 ring rounded">How it works</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors ring rounded">Pricing</a></div>
-      <div><h4 class="display font-semibold text-ink-900 mb-3">Company</h4><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 ring rounded">About</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 ring rounded">Privacy</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors ring rounded">Data rights</a></div>
-    </div>
+ <div class="max-w-6xl mx-auto px-6 py-12 flex flex-wrap justify-between gap-8">
+  <div class="max-w-xs">
+   <div class="flex items-center gap-2.5"><span class="grid place-items-center w-10 h-10 rounded-2xl bg-leaf-500 text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-3.5 3-6 7-6s7 2.5 7 6M6 12c2 4 10 4 12 0M9 6c0-2 1.5-3 3-3s3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="display font-extrabold text-2xl text-ink-900">Save</span></div>
+   <p class="body text-sm text-ink-500 mt-4">Own your recipes. Skip the hassle.</p>
   </div>
-  <div class="border-t border-white/30"><div class="max-w-6xl mx-auto px-6 py-5 text-sm text-ink-500 flex flex-wrap justify-between gap-2"><span>© 2026 Save.</span><span>Made for home kitchens.</span></div></div>
+  <div class="flex gap-14 text-sm">
+   <div><h4 class="display font-semibold text-ink-900 mb-3">Product</h4><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 rounded">Features</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 rounded">How it works</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors rounded">Pricing</a></div>
+   <div><h4 class="display font-semibold text-ink-900 mb-3">Company</h4><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 rounded">About</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors mb-2 rounded">Privacy</a><a href="#" class="block text-ink-500 hover:text-leaf-600 transition-colors rounded">Data rights</a></div>
+  </div>
+ </div>
+ <div class="border-t border-white/30"><div class="max-w-6xl mx-auto px-6 py-5 text-sm text-ink-500 flex flex-wrap justify-between gap-2"><span>© 2026 Save.</span><span>Made for home kitchens.</span></div></div>
 </footer>
 </body>
 </html>
