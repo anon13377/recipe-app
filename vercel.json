@@ -1,0 +1,10 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "routes": [
+    { "src": "^/$", "dest": "/landing/index.html" },
+    { "src": "/landing/(.*)", "dest": "/landing/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
